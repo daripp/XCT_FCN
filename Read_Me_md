@@ -1,0 +1,79 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Read Me.md",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOfH/vTZW5O5YLIFM64MZn4",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/daripp/XCT_FCN/blob/main/Read_Me_md\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Welcome to workflow associated with the manuscript: A workflow for segmenting soil and plant X-ray CT images with deep learning in Google’s Colaboratory\n",
+        "\n",
+        "X-ray micro-computed tomography (X-ray µCT) has enabled the characterization of the properties and processes that take place in plants and soils at the micron scale. Despite the widespread use of this advanced technique, major limitations in both hardware and software limit the speed and accuracy of image processing and data analysis. Recent advances in machine learning, specifically the application of convolutional neural networks to image analysis have enabled rapid and accurate segmentation of image data. Yet, challenges remain in applying convolutional neural networks to the analysis of environmentally and agriculturally relevant images. Specifically, there is a disconnect between the computer scientists and engineers, who build these AI/ML tools, and the potential end users in agricultural research, who may be unsure of how to apply these tools in their work. Additionally, the computing resources required for training and applying deep learning models are unique, more common to computer gaming systems or graphics design work, rather than traditional computational systems. To navigate these challenges, we developed a modular workflow for applying convolutional neural networks to X-ray µCT images, using low-cost resources in Google’s Colaboratory web application (https://github.com/daripp/XCT_FCN/blob/main/For_publication_Leaf_ALS_FCN_Workflow.ipynb). \n",
+        "\n",
+        "Watch the instructional Youtube video to get started here:\n",
+        "https://youtu.be/JLAZBWDTP1c\n"
+      ],
+      "metadata": {
+        "id": "fUMKpezTyV0A"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Instructions:\n",
+        "Mount google drive by running  #Code Box 1"
+      ],
+      "metadata": {
+        "id": "FXk-sszf6xaZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "LVPVfe8Vx-16"
+      },
+      "outputs": [],
+      "source": [
+        "#Code Box 1\n",
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')\n",
+        "!ls \"/content/drive/My Drive}"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Specify material names in Code Box 3\n",
+        "Name is arbitrary, but is used for naming output folders\n"
+      ],
+      "metadata": {
+        "id": "BdoHa4X664oV"
+      }
+    }
+  ]
+}
