@@ -9,7 +9,7 @@ https://youtu.be/JLAZBWDTP1c
 
 
 
-**1. Mount google drive by running  #Code Box 1**
+# **1. Mount google drive by running  Code Box 1**
 
 ```
 #Code Box 1
@@ -17,14 +17,14 @@ from google.colab import drive
 drive.mount('/content/drive')
 !ls "/content/drive/My Drive}
 ```
-**2. Check GPU Allocation:**
+# **2. Check GPU Allocation:**
 GPU's with less VRAM (K80) will need to train on smaller images set at smaller batch sizes than GPU's with more VRAM (A100)
 
 ```
 #Code Box 2
 !!nvidia-smi
 ```
-**3. Specficy material names, input, output, and save directories in code box 3**
+# **3. Specficy material names, input, output, and save directories in Code Box 3**
 
   a. Material ***name*** is arbitrary, but is used for naming output folders
   
@@ -80,7 +80,7 @@ k. Specify the directory where you want to save models
 ```
 models_directory = "drive/MyDrive/ALS Workflow/best_models/"
 ```
-l.Specify the name you want to give the folder that contains the group of models that you will generate based on the number of models you are training
+l. Specify the name you want to give the folder that contains the group of models that you will generate based on the number of models you are training
 ```
 model_group='10 leaf bce p2 100 epoch/'
 ```
@@ -88,7 +88,7 @@ m. Specify the name you want to give each individual model with in the model gro
 ```
 current_model_name = '10 leaf bce p2 100 epoch__'
 ```
-n.Specify the directories where your test images and masks are located
+n. Specify the directories where your test images and masks are located
 ```
 test_images = "drive/MyDrive/ALS Workflow/test/test_images/"
 test_masks= 'drive/MyDrive/ALS Workflow/test/test_masks/'
@@ -106,13 +106,45 @@ q. Input the 5 alpha-numeric characters proceding the file number of your images
   #EX. Jmic3111_S0_GRID image_0.tif ----->mage_
 proceeding="lice_"
 ```
-r. Input the 4 or more alpha-numeric characters following the file number
+r. Input the 4 or more alpha-numeric characters following the file number. You can use almost any image type, but .tif and .png are best.
 ```
   #EX. Jmic3111_S0_GRID image_0.tif ----->.tif
-following=".tif"
+following=".tif" 
 ```
 s. Specify the output directory for your segmentation results
 ```
 output_directory = "drive/MyDrive/ALS Workflow/test_images_results change/"
 ```
+# ***Parameter Loading***
 
+Once you have specificied your input/output directories, you can proceed with running this code block (Code box 4). This code block is used for batch normalization purposes; the results of this block are unique to your training data set. When using models for segmentation, you must link to the original training data set you used for model generation or save the 3 tensor means and std values that are generated in the output.
+
+# ***Model Training***
+
+Run Code Box 5 after you have specified a unique model group name. You must run the parameter loading block (Code Box 4) before running model training. If block returns an error such as you have run out of vram, you must restart the notebook and either decrease you image scale or batch size until you do not run out of VRAM.
+
+# ***Validation***
+
+Once your models have trained, it is time to validate them by running Code Box 6. If you interupt your model training to evaluate the model, you must change the number of models to match the number of models you trained. Models are evaluated on their ***precision*** (total correct pixels predictions out of total pixel predictions for a specific material class), ***recall*** (total correct pixel predictions out of all possible correct pixel predictions for a material class), ***accuracy*** (total correct pixel predictions out of all pixel predictions in the image) and ***F1 score*** (the harmonic mean of recall and precesion). You can adjust your predictions by increasing or decreasing your confidence threshold for a particular material class in Code Box 3.
+
+# ***Save Validation***
+
+You can save your validation data by running Code Box 7. It will overwrite the file designated in the ***csv_directory*** input area of Code Box 3.
+
+# Input Best Model Number
+
+Based on your validation results, choose the model that you think does the best job on your validation data and input the model number in Code Box 8.
+
+```
+#Code Box 8
+"""Input model number here"""
+model_number='8'
+```
+
+# ***Load Model***
+
+Run Code Box 9 to load the model you selected
+
+# ***Image Segmentation and Data Extraction***
+
+Runc Cod Box 10 to segment your data and extact area and perimeter information from your image data. Binary masks of the prediced materials will be generated as well. These can be operated on independently. A CSV file of the area and perimeter data will automatically be generated after all images in the inference directory in Code Box 3 have been analyzed.
