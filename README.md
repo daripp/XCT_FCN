@@ -4,3 +4,12 @@ X-ray micro-computed tomography (X-ray µCT) has enabled the characterization of
 
 Watch the instructional Youtube video to get started here:
 https://youtu.be/JLAZBWDTP1c
+
+#Instructions:
+Mount google drive by running  #Code Box 1
+
+json
+'''{#Code Box 1
+from google.colab import drive
+drive.mount('/content/drive')
+!ls "/content/drive/My Drive}"'''
