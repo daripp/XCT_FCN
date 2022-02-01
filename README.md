@@ -9,11 +9,8 @@ https://youtu.be/JLAZBWDTP1c
 Mount google drive by running  #Code Box 1
 
 ```json
-{
    #Code Box 1
 from google.colab import drive
 drive.mount('/content/drive')
 !ls "/content/drive/My Drive
-
-}
 ```
