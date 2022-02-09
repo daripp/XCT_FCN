@@ -147,4 +147,4 @@ Run Code Box 9 to load the model you selected
 
 # ***Image Segmentation and Data Extraction***
 
-Runc Cod Box 10 to segment your data and extact area and perimeter information from your image data. Binary masks of the prediced materials will be generated as well. These can be operated on independently. A CSV file of the area and perimeter data will automatically be generated after all images in the inference directory in Code Box 3 have been analyzed.
+Runc Cod Box 10 to segment your data and extact area and perimeter information from your image data. Binary masks of the prediced materials will be generated as well. These can be operated on independently. A CSV file of the area and perimeter data will automatically be generated after all images in the inference directory in Code Box 3 have been analyzed. If needed, the code can be easily modified to extract other parameters using the region propertiers function.
