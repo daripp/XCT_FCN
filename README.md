@@ -5,6 +5,9 @@ X-ray micro-computed tomography (X-ray µCT) has enabled the characterization of
 Watch the instructional Youtube video to get started here:
 https://youtu.be/JLAZBWDTP1c
 
+See pre-print for the publication here:
+https://doi.org/10.48550/arXiv.2203.09674
+
 # *** Read Me ***
 
 
