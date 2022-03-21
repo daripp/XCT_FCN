@@ -8,6 +8,9 @@ https://youtu.be/JLAZBWDTP1c
 See pre-print for the publication here:
 https://doi.org/10.48550/arXiv.2203.09674
 
+Citation:
+Rippner, D.A., Raja, P., Earles, J.M., Buchko, A., Momayyezi, M., Duong, F., Parkinson, D., Forrestel, E., Shackel, K., McElrone, A.J., 2022. A workflow for segmenting soil and plant X-ray CT images with deep learning in Googles Colaboratory. arXiv:2203.09674 [physics].
+
 # *** Read Me ***
 
 
