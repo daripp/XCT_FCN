@@ -1,4 +1,4 @@
-FCNWorkflow - SCINet Implementation
+FCNWorkflow - SCINet Implementation-Jeffrey Neyhart
 The code in this repository works on USDA's SCINet Scientific Computing resource.
 
 Setup
